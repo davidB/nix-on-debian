@@ -12,6 +12,9 @@ apt install -y \
     sudo \
     xz-utils
 
+# git is to help use of the image in ci / github-action (at least to use actions/checkout)
+apt install -y git
+
 apt autoremove --purge -y
 rm -rf /var/lib/apt/lists/*
 
