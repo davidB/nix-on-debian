@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: davidb31/nix-on-debian:latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2.3.4
       - name: First run of nix-shell to measure download time
         run: nix-shell --run 'echo load nix packages'
         working-directory: ./examples/dump_info
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     container: davidb31/nix-on-debian:latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2.3.4
       - name: first run of nix-shell to measure download time
         run: nix-shell --run 'echo load nix packages'
         working-directory: ./examples/bazel
