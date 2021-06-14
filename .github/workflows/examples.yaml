@@ -3,6 +3,25 @@ name: examples
 on: [push]
 
 jobs:
+  examples_dump_info:
+    runs-on: ubuntu-latest
+    container: davidb31/nix-on-debian:latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: First run of nix-shell to measure download time
+        run: nix-shell --run 'echo load nix packages'
+        working-directory: ./examples/dump_info
+      - name: show info
+        run: nix-shell --run 'nix-info'
+        working-directory: ./examples/dump_info
+      - name: demo of multi-line command
+        run: |
+          nix-shell --run '
+              echo "command 1"
+              echo "command 2"
+          '
+        working-directory: ./examples/dump_info
+
   examples_bazel:
     runs-on: ubuntu-latest
     container: davidb31/nix-on-debian:latest
