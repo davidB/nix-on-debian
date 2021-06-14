@@ -12,7 +12,6 @@ with pkgs;
 mkShell {                  # mkShell is a helper function
   name="dev-environment";       # that requires a name
   nativeBuildInputs = [    # for a list of packages (search https://search.nixos.org/packages)
-    nix-info
     bazelisk
     bazel-buildtools
   ];
