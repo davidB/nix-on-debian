@@ -15,5 +15,7 @@ RUN curl -L https://nixos.org/nix/install | sh \
 
 ENV NIX_PROFILES="/nix/var/nix/profiles/default /home/ci/.nix-profile"
 ENV NIX_PATH=/home/ci/.nix-defexpr/channels
+ENV NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+ENV PATH=/home/ci/.nix-profile/bin:$PATH
 
-CMD [ "bash", "--login" ]
+# CMD [ "bash", "--login" ]
