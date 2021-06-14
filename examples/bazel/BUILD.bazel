@@ -1,0 +1,5 @@
+genrule(
+    name = "fake",
+    outs = ["fake.log"],
+    cmd_bash = """echo "hello world" | tee $@""",
+)

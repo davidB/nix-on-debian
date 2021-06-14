@@ -33,7 +33,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: nix-on-debian:buster-slim
+    container: nix-on-debian:latest
     steps:
       - uses: actions/checkout@v1
       - name: First run of nix-shell to measure download time
@@ -47,6 +47,8 @@ jobs:
                 echo "command 2"
             '
 ```
+
+see folder [/examples](.examples) and [.github/workflows/examples.yaml](.github/workflows/examples.yaml)
 
 ### local + CI
 
