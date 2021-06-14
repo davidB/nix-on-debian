@@ -37,5 +37,5 @@ jobs:
         run: nix-shell --run 'echo load nix packages'
         working-directory: ./examples/bazel
       - name: test and lint
-        run: nix-shell --run 'bazelisk test //...'
+        run: nix-shell --run 'bazelisk build //...'
         working-directory: ./examples/bazel
