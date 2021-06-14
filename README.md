@@ -2,8 +2,6 @@
 
 A OCI / Docker image to be able to run `nix-shell` (or other nix tool) over a debian image (and not a nixos image).
 
-The user inside the image is not root, he is name 'ci' and have 'sudo'.
-
 ## Sample usage
 
 ### local
@@ -59,5 +57,5 @@ Other how to reproduce and debug CI locally.
 ## TODO
 
 - [ ] reduce size
-- [ ] avoid need to "bash --login" to load nix setup defined into `$HOME/.profile`
+- [x] avoid need to "bash --login" to load nix setup defined into `$HOME/.profile`
 - [ ] provide doc, more instructions,...
