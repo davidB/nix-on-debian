@@ -11,6 +11,11 @@ jobs:
       - name: First run of nix-shell to measure download time
         run: nix-shell --run 'echo load nix packages'
         working-directory: ./examples/dump_info
+      - name: source profile
+        run: |
+          env
+          source $HOME/.profile
+        working-directory: ./examples/dump_info
       - name: show info
         run: nix-shell --run 'nix-info'
         working-directory: ./examples/dump_info
