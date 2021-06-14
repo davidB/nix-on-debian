@@ -10,7 +10,7 @@ jobs:
       - name: source profile
         run: |
           env
-          source $HOME/.profile
+          # . $HOME/.profile
           git --version || echo "no git found"
           nix-env -q || echo "no nix-env found"
       - uses: actions/checkout@v2.3.4
