@@ -46,7 +46,7 @@ jobs:
             '
 ```
 
-see folder [/examples](.examples) and [.github/workflows/examples.yaml](.github/workflows/examples.yaml)
+see folder [/examples](https://github.com/davidB/nix-on-debian/blob/main/examples) and [.github/workflows/examples.yaml]([.github/workflows/examples.yaml](https://github.com/davidB/nix-on-debian/blob/main/.github/workflows/examples.yaml))
 
 ### local + CI
 
