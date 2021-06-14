@@ -10,7 +10,7 @@ The user inside the image is not root, he is name 'ci' and have 'sudo'.
 
 ```sh
 # docker build -t nix-on-debian:latest .
-docker run -it --rm -v $PWD:/workspace -w /workspace -t nix-on-debian:latest
+docker run -it --rm -v $PWD:/workspace -w /workspace -t davidb31/nix-on-debian:latest
 
 # inside container
 # create add-hox nodejs env and run `node --version` inside
@@ -33,7 +33,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: nix-on-debian:latest
+    container: davidb31/nix-on-debian:latest
     steps:
       - uses: actions/checkout@v1
       - name: First run of nix-shell to measure download time

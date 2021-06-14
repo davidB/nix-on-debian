@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: nix-on-debian:latest
+    container: davidb31/nix-on-debian:latest
     steps:
       - uses: actions/checkout@v1
       - name: First run of nix-shell to measure download time
