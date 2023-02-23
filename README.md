@@ -52,6 +52,29 @@ see folder [/examples](https://github.com/davidB/nix-on-debian/blob/main/example
 
 Other how to reproduce and debug CI locally.
 
+### To specify a package version with nixpkgs
+
+Please note there is two components nix and nixos with their own versions. For instance nix has the version 2.13.2 and nixos 22.11
+More on the current version on the download page of nixos [https://nixos.org/download.html](https://nixos.org/download.html)
+
+To find a package with a specific version use this website [https://lazamar.co.uk/nix-versions/](https://lazamar.co.uk/nix-versions/).
+In this example we will use nixos 22.11. Enter a package name and select a revision. You will have some example as
+
+```sh
+nix-env -iA git-lfs -f https://github.com/NixOS/nixpkgs/archive/7d7622909a38a46415dd146ec046fdc0f3309f44.tar.gz
+```
+
+to add to your CI.
+
+You can use the command 
+
+```sh
+nix-env -qP --available git-lfs
+```
+
+to get some inside to with version is associated the latest version of a package.
+
+
 // TODO
 
 ## TODO
