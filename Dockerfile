@@ -4,7 +4,7 @@
 FROM docker.io/debian:buster-slim
 
 ARG NIXPKGS_CONFIG_ALLOW_UNFREE=true
-ARG NIXPKGS_VERSION=2.3.12
+ARG NIXPKGS_VERSION=2.13.2
 
 COPY nix-on-debian-prepare.sh .
 RUN bash nix-on-debian-prepare.sh
